@@ -1,0 +1,70 @@
+#dungeon-map {
+    height: 100%;
+    background-color: #424242;
+}
+
+.stone2-brown0, .stone2-brown1, .stone2-brown2, .stone2-brown3, .stone2-dark0,
+.stone2-dark1, .stone2-dark2, .stone2-dark3, .stone2-gray0, .stone2-gray1,
+.stone2-gray2, .stone2-gray3, .stone-black-marked0, .stone-black-marked1, .stone-black-marked2,
+.stone-black-marked3, .stone-black-marked4, .stone-black-marked5, .stone-black-marked6, .stone-black-marked7,
+.stone-black-marked8, .stone-brick1, .stone-brick10, .stone-brick11, .stone-brick12,
+.stone-brick2, .stone-brick3, .stone-brick4, .stone-brick5, .stone-brick6,
+.stone-brick7, .stone-brick8, .stone-brick9, .stone-dark0, .stone-dark1,
+.stone-dark2, .stone-dark3, .stone-gray0, .stone-gray1, .stone-gray2,
+.stone-gray3
+{ display: inline-block; background: url('/tiles/dngn/stone-walls.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
+
+.stone2-brown0 { background-position: -0px -0px; width: 32px; height: 32px; }
+.stone2-brown1 { background-position: -32px -0px; width: 32px; height: 32px; }
+.stone2-brown2 { background-position: -64px -0px; width: 32px; height: 32px; }
+.stone2-brown3 { background-position: -96px -0px; width: 32px; height: 32px; }
+.stone2-dark0 { background-position: -128px -0px; width: 32px; height: 32px; }
+.stone2-dark1 { background-position: -160px -0px; width: 32px; height: 32px; }
+.stone2-dark2 { background-position: -0px -32px; width: 32px; height: 32px; }
+.stone2-dark3 { background-position: -32px -32px; width: 32px; height: 32px; }
+.stone2-gray0 { background-position: -64px -32px; width: 32px; height: 32px; }
+.stone2-gray1 { background-position: -96px -32px; width: 32px; height: 32px; }
+.stone2-gray2 { background-position: -128px -32px; width: 32px; height: 32px; }
+.stone2-gray3 { background-position: -160px -32px; width: 32px; height: 32px; }
+.stone-black-marked0 { background-position: -0px -64px; width: 32px; height: 32px; }
+.stone-black-marked1 { background-position: -32px -64px; width: 32px; height: 32px; }
+.stone-black-marked2 { background-position: -64px -64px; width: 32px; height: 32px; }
+.stone-black-marked3 { background-position: -96px -64px; width: 32px; height: 32px; }
+.stone-black-marked4 { background-position: -128px -64px; width: 32px; height: 32px; }
+.stone-black-marked5 { background-position: -160px -64px; width: 32px; height: 32px; }
+.stone-black-marked6 { background-position: -0px -96px; width: 32px; height: 32px; }
+.stone-black-marked7 { background-position: -32px -96px; width: 32px; height: 32px; }
+.stone-black-marked8 { background-position: -64px -96px; width: 32px; height: 32px; }
+.stone-brick1 { background-position: -96px -96px; width: 32px; height: 32px; }
+.stone-brick10 { background-position: -128px -96px; width: 32px; height: 32px; }
+.stone-brick11 { background-position: -160px -96px; width: 32px; height: 32px; }
+.stone-brick12 { background-position: -0px -128px; width: 32px; height: 32px; }
+.stone-brick2 { background-position: -32px -128px; width: 32px; height: 32px; }
+.stone-brick3 { background-position: -64px -128px; width: 32px; height: 32px; }
+.stone-brick4 { background-position: -96px -128px; width: 32px; height: 32px; }
+.stone-brick5 { background-position: -128px -128px; width: 32px; height: 32px; }
+.stone-brick6 { background-position: -160px -128px; width: 32px; height: 32px; }
+.stone-brick7 { background-position: -0px -160px; width: 32px; height: 32px; }
+.stone-brick8 { background-position: -32px -160px; width: 32px; height: 32px; }
+.stone-brick9 { background-position: -64px -160px; width: 32px; height: 32px; }
+.stone-dark0 { background-position: -96px -160px; width: 32px; height: 32px; }
+.stone-dark1 { background-position: -128px -160px; width: 32px; height: 32px; }
+.stone-dark2 { background-position: -160px -160px; width: 32px; height: 32px; }
+.stone-dark3 { background-position: -0px -192px; width: 32px; height: 32px; }
+.stone-gray0 { background-position: -32px -192px; width: 32px; height: 32px; }
+.stone-gray1 { background-position: -64px -192px; width: 32px; height: 32px; }
+.stone-gray2 { background-position: -96px -192px; width: 32px; height: 32px; }
+.stone-gray3 { background-position: -128px -192px; width: 32px; height: 32px; }
+
+.floor-grey-dirt0, .floor-grey-dirt1, .floor-grey-dirt2, .floor-grey-dirt3, .floor-grey-dirt4,
+.floor-grey-dirt5, .floor-grey-dirt6, .floor-grey-dirt7
+{ display: inline-block; background: url('/tiles/dngn/floors.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
+
+.floor-grey-dirt0 { background-position: -0px -0px; width: 32px; height: 32px; }
+.floor-grey-dirt1 { background-position: -32px -0px; width: 32px; height: 32px; }
+.floor-grey-dirt2 { background-position: -0px -32px; width: 32px; height: 32px; }
+.floor-grey-dirt3 { background-position: -32px -32px; width: 32px; height: 32px; }
+.floor-grey-dirt4 { background-position: -0px -64px; width: 32px; height: 32px; }
+.floor-grey-dirt5 { background-position: -32px -64px; width: 32px; height: 32px; }
+.floor-grey-dirt6 { background-position: -0px -96px; width: 32px; height: 32px; }
+.floor-grey-dirt7 { background-position: -32px -96px; width: 32px; height: 32px; }
