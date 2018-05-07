@@ -1,5 +1,4 @@
 import React from 'react'
-import './App.css'
 import Dungeon from './scenes/dungeon'
 
 class App extends React.Component {

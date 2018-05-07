@@ -1,0 +1,22 @@
+#dungeon {
+  height: 100%;
+  background-color: #424242;
+  display: grid;
+  grid-template-columns: auto 400px;
+  grid-template-rows: 75% 25%;
+
+  #dungeon-map {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  #sidebar {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+  }
+
+  #message-log {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+}

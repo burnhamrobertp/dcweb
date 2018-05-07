@@ -1,5 +1,4 @@
 import React from 'react'
-import './DungeonMap.css'
 import MapGrid from './components/MapGrid'
 import {DungeonFeatures} from "../../data/dungeon";
 
