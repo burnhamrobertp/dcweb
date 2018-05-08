@@ -10,18 +10,22 @@ class DungeonMap extends React.Component {
   }
 
   get map() {
+    let width = 15,
+      height = 15;
     return {
-      width: 15,
-      height: 15,
+      width: width,
+      height: height,
       playerPosition: [1, 1],
       map: [
-        Array(15).fill(DungeonFeatures.WALL.INDESTRUCTIBLE),
-        [
-          DungeonFeatures.WALL.INDESTRUCTIBLE,
-          ...Array(13).fill(DungeonFeatures.FLOOR.DIRT_GREY),
-          DungeonFeatures.WALL.INDESTRUCTIBLE
-        ],
-        Array(15).fill(DungeonFeatures.WALL.INDESTRUCTIBLE)
+        Array(width).fill(DungeonFeatures.WALL.INDESTRUCTIBLE),
+        ...Array(height-2).fill(
+          [
+            DungeonFeatures.WALL.INDESTRUCTIBLE,
+            ...Array(width-2).fill(DungeonFeatures.FLOOR.DIRT_GREY),
+            DungeonFeatures.WALL.INDESTRUCTIBLE
+          ]
+        ),
+        Array(width).fill(DungeonFeatures.WALL.INDESTRUCTIBLE)
       ]
     }
   }

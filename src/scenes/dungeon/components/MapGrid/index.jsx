@@ -5,13 +5,13 @@ class MapGrid extends React.Component {
   render() {
     const map = this.props.map.map.map(
       row => (
-        <div id="map-row">
+        <div className="map-row">
           { row.map(feature => <MapFeature feature={feature} /> ) }
         </div>
       )
     );
 
-    return <div className="map-grid">
+    return <div id="map-grid">
       { map }
     </div>
   }

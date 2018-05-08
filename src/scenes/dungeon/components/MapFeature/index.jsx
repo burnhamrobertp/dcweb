@@ -2,7 +2,7 @@ import React from 'react'
 
 class MapFeature extends React.Component {
   render() {
-    return <div id="map-feature" className={this.featureClass}>
+    return <div className={`map-feature ${this.featureClass}`}>
 
     </div>
   }
