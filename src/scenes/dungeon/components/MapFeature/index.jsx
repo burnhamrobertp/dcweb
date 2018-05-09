@@ -8,7 +8,7 @@ class MapFeature extends React.Component {
   }
 
   get featureClass() {
-    let variant = Math.floor(Math.random() * this.props.feature.sprite.variants);
+    let variant = Math.floor(Math.random() * this.props.feature.sprite.variants)
     return `${this.props.feature.sprite.class}${variant}`
   }
 }

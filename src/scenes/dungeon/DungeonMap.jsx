@@ -1,6 +1,6 @@
 import React from 'react'
 import MapGrid from './components/MapGrid'
-import {DungeonFeatures} from "../../data/dungeon";
+import {DungeonFeatures} from '../../data/dungeon'
 
 class DungeonMap extends React.Component {
   render() {
@@ -11,22 +11,22 @@ class DungeonMap extends React.Component {
 
   get map() {
     let width = 15,
-      height = 15;
+      height = 15
     return {
       width: width,
       height: height,
       playerPosition: [1, 1],
       map: [
         Array(width).fill(DungeonFeatures.WALL.INDESTRUCTIBLE),
-        ...Array(height-2).fill(
+        ...Array(height - 2).fill(
           [
             DungeonFeatures.WALL.INDESTRUCTIBLE,
-            ...Array(width-2).fill(DungeonFeatures.FLOOR.DIRT_GREY),
-            DungeonFeatures.WALL.INDESTRUCTIBLE
-          ]
+            ...Array(width - 2).fill(DungeonFeatures.FLOOR.DIRT_GREY),
+            DungeonFeatures.WALL.INDESTRUCTIBLE,
+          ],
         ),
-        Array(width).fill(DungeonFeatures.WALL.INDESTRUCTIBLE)
-      ]
+        Array(width).fill(DungeonFeatures.WALL.INDESTRUCTIBLE),
+      ],
     }
   }
 }

@@ -1,4 +1,4 @@
-import { LocalizedTileNames } from "../localizations/dungeon";
+import {LocalizedTileNames} from '../localizations/dungeon'
 
 export const DungeonFeatures = {
   WALL: {
@@ -7,8 +7,8 @@ export const DungeonFeatures = {
       sprite: {
         class: 'stone-dark',
         variants: 4,
-      }
-    }
+      },
+    },
   },
   FLOOR: {
     DIRT_GREY: {
@@ -16,7 +16,7 @@ export const DungeonFeatures = {
       sprite: {
         class: 'floor-grey-dirt',
         variants: 8,
-      }
-    }
-  }
-};
+      },
+    },
+  },
+}
