@@ -2,7 +2,7 @@ import React from 'react'
 import MapGrid from './components/MapGrid'
 import {DungeonFeatures} from '../../data/dungeon'
 
-class DungeonMap extends React.Component {
+class TileMap extends React.Component {
   render() {
     return <div id="dungeon-map">
       <MapGrid map={this.map} />
@@ -31,4 +31,4 @@ class DungeonMap extends React.Component {
   }
 }
 
-export default DungeonMap
+export default TileMap

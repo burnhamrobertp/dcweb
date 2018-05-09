@@ -1,10 +1,10 @@
 import React from 'react'
-import Dungeon from './scenes/dungeon'
+import Game from './scenes/game'
 
 class App extends React.Component {
   render() {
     return <div className="App">
-      <Dungeon />
+      <Game />
     </div>
   }
 }
