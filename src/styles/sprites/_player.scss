@@ -1,7 +1,7 @@
 .player-dwarf-f, .player-dwarf-m, .player-elf-f, .player-elf-m, .player-gnome-f,
 .player-gnome-m, .player-human-f, .player-human-m, .player-orc-f, .player-orc-m,
 .player-shadow, .player-troll-f, .player-troll-m
-{ display: inline-block; background: url('/tiles/player/base.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
+{ display: inline-block; background: url('/tiles/player/base.png') no-repeat; overflow: hidden; }
 
 .player-dwarf-f { background-position: -0px -0px; width: 32px; height: 32px; }
 .player-dwarf-m { background-position: -32px -0px; width: 32px; height: 32px; }
