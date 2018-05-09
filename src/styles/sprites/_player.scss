@@ -1,0 +1,18 @@
+.player-dwarf-f, .player-dwarf-m, .player-elf-f, .player-elf-m, .player-gnome-f,
+.player-gnome-m, .player-human-f, .player-human-m, .player-orc-f, .player-orc-m,
+.player-shadow, .player-troll-f, .player-troll-m
+{ display: inline-block; background: url('/tiles/player/base.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
+
+.player-dwarf-f { background-position: -0px -0px; width: 32px; height: 32px; }
+.player-dwarf-m { background-position: -32px -0px; width: 32px; height: 32px; }
+.player-elf-f { background-position: -64px -0px; width: 32px; height: 32px; }
+.player-elf-m { background-position: -0px -32px; width: 32px; height: 32px; }
+.player-gnome-f { background-position: -32px -32px; width: 32px; height: 32px; }
+.player-gnome-m { background-position: -64px -32px; width: 32px; height: 32px; }
+.player-human-f { background-position: -0px -64px; width: 32px; height: 32px; }
+.player-human-m { background-position: -32px -64px; width: 32px; height: 32px; }
+.player-orc-f { background-position: -64px -64px; width: 32px; height: 32px; }
+.player-orc-m { background-position: -0px -96px; width: 32px; height: 32px; }
+.player-shadow { background-position: -32px -96px; width: 32px; height: 32px; }
+.player-troll-f { background-position: -64px -96px; width: 32px; height: 32px; }
+.player-troll-m { background-position: -0px -128px; width: 32px; height: 32px; }

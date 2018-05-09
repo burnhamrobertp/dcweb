@@ -1,6 +1,6 @@
 import LocalizedStrings from 'react-localization'
 
-export const MonsterNames = new LocalizedStrings({
+export const LocalizedMonsterNames = new LocalizedStrings({
   en: {
     rat: 'Rat',
     rat_grey: 'Grey Rat',
