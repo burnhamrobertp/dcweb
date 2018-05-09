@@ -1,16 +1,20 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 class MessageLog extends React.Component {
   render() {
+    const messages = this.props.messages.map(message => <div>{message}</div>)
+
     return <div id="message-log">
-      <div>Some Message</div>
-      <div>Another Message</div>
-      <div>Several Messages</div>
-      <div>Off screen yet?</div>
-      <div>Nearly or probably</div>
-      <div>A message that definitely shouldn't be visible no matter what you do at least the latter part of this should be hidden.</div>
+      {messages}
     </div>
   }
 }
 
-export default MessageLog
+const mapStateToProps = state => ({
+  messages: state.messages.list
+})
+
+export default connect(
+  mapStateToProps
+)(MessageLog)
