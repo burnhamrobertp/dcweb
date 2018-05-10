@@ -3,7 +3,7 @@ import Tile from './Tile'
 
 class TileRow extends React.Component {
   render() {
-    const tiles = this.rowTiles.map(x => <Tile x={x} y={this.props.y} /> )
+    const tiles = this.rowTiles.map(x => <Tile key={x} x={x} y={this.props.y} /> )
 
     return <div className="map-row">
       {tiles}
