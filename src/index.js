@@ -3,7 +3,7 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import './styles/dcweb.css'
-import rootReducer from './reducers'
+import rootReducer from './state/reducers'
 import App from './App'
 import registerServiceWorker from './registerServiceWorker'
 

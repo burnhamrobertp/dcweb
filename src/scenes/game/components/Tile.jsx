@@ -5,14 +5,9 @@ import Feature from './Feature'
 class Tile extends React.Component {
   render() {
     const features = this.props.features.map((feature, i) => <Feature key={i} feature={feature} />)
-    return <div className={this.tileClass}>
+    return <div className={this.props.tile.sprite.class}>
       {features}
     </div>
-  }
-
-  get tileClass() {
-    let variant = Math.floor(Math.random() * this.props.tile.sprite.variants)
-    return `${this.props.tile.sprite.class}${variant}`
   }
 }
 

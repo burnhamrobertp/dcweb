@@ -1,5 +1,5 @@
 import { handleActions } from 'redux-actions'
-import { PlayerRaces } from '../data/player'
+import { PlayerRaces } from 'data/player'
 
 const DEFAULT_STATE = {
   x: 1,
