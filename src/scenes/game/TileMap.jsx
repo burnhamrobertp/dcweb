@@ -4,21 +4,18 @@ import TileRow from './components/TileRow'
 
 class TileMap extends React.Component {
   render() {
-    const tiles = this.rows.map(y => <TileRow key={y} y={y} width={this.props.width} />)
+    const tiles = this.props.map.map((tiles, y) => <TileRow key={y} y={y} tiles={tiles} />)
 
     return <div id="game-map">
       {tiles}
     </div>
-  }
-
-  get rows() {
-    return Array.from(Array(this.props.height).keys())
   }
 }
 
 const mapStateToProps = state => ({
   width: state.map.width,
   height: state.map.height,
+  map: state.map[state.map.currentBranch][state.map.currentDepth],
 })
 
 export default connect(
