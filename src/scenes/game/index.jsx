@@ -5,7 +5,7 @@ import SideBar from './SideBar'
 
 class Game extends React.Component {
   render() {
-    return <div id="dungeon">
+    return <div id="game">
       <TileMap />
       <SideBar />
       <MessageLog />

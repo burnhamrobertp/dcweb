@@ -1,34 +1,26 @@
 import React from 'react'
-import MapGrid from './components/MapGrid'
-import { MapTiles } from '../../data/map'
+import { connect } from 'react-redux'
+import TileRow from './components/TileRow'
 
 class TileMap extends React.Component {
   render() {
-    return <div id="dungeon-map">
-      <MapGrid map={this.map} />
+    const tiles = this.rows.map(y => <TileRow y={y} width={this.props.width} />)
+
+    return <div id="game-map">
+      {tiles}
     </div>
   }
 
-  get map() {
-    let width = 15,
-      height = 15
-    return {
-      width: width,
-      height: height,
-      playerPosition: [1, 1],
-      map: [
-        Array(width).fill(MapTiles.WALL.INDESTRUCTIBLE),
-        ...Array(height - 2).fill(
-          [
-            MapTiles.WALL.INDESTRUCTIBLE,
-            ...Array(width - 2).fill(MapTiles.FLOOR.DIRT_GREY),
-            MapTiles.WALL.INDESTRUCTIBLE,
-          ],
-        ),
-        Array(width).fill(MapTiles.WALL.INDESTRUCTIBLE),
-      ],
-    }
+  get rows() {
+    return Array.from(Array(this.props.height).keys())
   }
 }
 
-export default TileMap
+const mapStateToProps = state => ({
+  width: state.map.width,
+  height: state.map.height,
+})
+
+export default connect(
+  mapStateToProps,
+)(TileMap)

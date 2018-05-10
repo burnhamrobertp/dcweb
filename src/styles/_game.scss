@@ -1,20 +1,18 @@
 $border: 2px solid $fg-primary;
 
-#dungeon {
+#game {
   height: 100%;
   background-color: $bg-primary;
   display: grid;
   grid-template-columns: auto 400px;
   grid-template-rows: 75% 25%;
 
-  #dungeon-map {
+  #game-map {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
 
-    #map-grid {
-      .map-row {
-        height: 32px;
-      }
+    .map-row {
+      height: 32px;
     }
   }
 
