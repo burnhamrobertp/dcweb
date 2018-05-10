@@ -13,6 +13,12 @@ const DEFAULT_STATE = {
   race: PlayerRaces.human,
 }
 
-export default handleActions({
-
-}, DEFAULT_STATE)
+export default handleActions(
+  {
+    PLAYER_ACTION_DIRECTION: (state, action) => ({
+      ...state,
+      x: state.x + action.payload.x,
+      y: state.y + action.payload.y,
+    })
+  }, DEFAULT_STATE
+)
