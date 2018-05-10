@@ -1,6 +1,17 @@
 import LocalizedStrings from 'react-localization'
 
-export const LocalizedMonsterNames = new LocalizedStrings({
+export const RaceNames = new LocalizedStrings({
+  en: {
+    dwarf: 'Dwarf',
+    elf: 'Elf',
+    gnome: 'Gnome',
+    human: 'Human',
+    orc: 'Orc',
+    troll: 'Troll',
+  }
+})
+
+export const MonsterNames = new LocalizedStrings({
   en: {
     rat: 'Rat',
     rat_grey: 'Grey Rat',
@@ -11,4 +22,4 @@ export const LocalizedMonsterNames = new LocalizedStrings({
     ooze_azure: 'Azure Ooze',
     ooze_grey: 'Grey Ooze',
   }
-});
+})

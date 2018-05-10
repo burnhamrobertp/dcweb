@@ -1,9 +1,9 @@
-import {LocalizedTileNames} from '../localizations/dungeon'
+import { TileNames } from '../localizations/map'
 
-export const DungeonFeatures = {
+export const MapTiles = {
   WALL: {
     INDESTRUCTIBLE: {
-      name: LocalizedTileNames.wall_i,
+      name: TileNames.wall_i,
       sprite: {
         class: 'stone-dark',
         variants: 4,
@@ -12,7 +12,7 @@ export const DungeonFeatures = {
   },
   FLOOR: {
     DIRT_GREY: {
-      name: LocalizedTileNames.floor_dirt_grey,
+      name: TileNames.floor_dirt_grey,
       sprite: {
         class: 'floor-grey-dirt',
         variants: 8,

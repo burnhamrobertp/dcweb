@@ -1,49 +1,49 @@
-import { LocalizedMonsterNames } from '../localizations/monsters'
-import { LocalizedAttacks } from '../localizations/actions'
+import { MonsterNames } from '../localizations/creatures'
+import { AttackVerbs } from '../localizations/actions'
 
 export const Monsters = {
   RAT: {
     COMMON: {
-      name: LocalizedMonsterNames.rat,
+      name: MonsterNames.rat,
       hp: '1d6',
-      LocalizedAttacks: [
+      attacks: [
         {
-          verb: LocalizedAttacks.bite,
+          verb: AttackVerbs.bite,
           damage: '1d4',
         },
       ],
     },
     GREY: {
-      name: LocalizedMonsterNames.rat_grey,
+      name: MonsterNames.rat_grey,
       hp: '1d6+6',
-      LocalizedAttacks: [
+      attacks: [
         {
-          verb: LocalizedAttacks.bite,
+          verb: AttackVerbs.bite,
           damage: '1d4+1',
         },
       ],
     },
     BROWN: {
-      name: LocalizedMonsterNames.rat_brown,
+      name: MonsterNames.rat_brown,
       hp: '4d4+6',
-      LocalizedAttacks: [
+      attacks: [
         {
-          verb: LocalizedAttacks.bite,
+          verb: AttackVerbs.bite,
           damage: '1d6',
         },
       ],
     },
     GREEN: {
-      name: LocalizedMonsterNames.rat_green,
+      name: MonsterNames.rat_green,
     },
   },
   OOZE: {
     GREY: {
-      name: LocalizedMonsterNames.ooze,
+      name: MonsterNames.ooze,
       hp: '2d6',
-      LocalizedAttacks: [
+      attacks: [
         {
-          verb: LocalizedAttacks.slam,
+          verb: AttackVerbs.slam,
           damage: '2d4',
         },
       ],

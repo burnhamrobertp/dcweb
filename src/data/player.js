@@ -1,40 +1,40 @@
-import { LocalizedPlayerRaces } from '../localizations/player'
+import { RaceNames } from '../localizations/creatures'
 
 export const PlayerRaces = {
   keyframe: ['dwarf', 'elf', 'gnome', 'human', 'orc', 'troll'],
 
   dwarf: {
-    name: LocalizedPlayerRaces.dwarf,
+    name: RaceNames.dwarf,
     sprite: {
       class: 'player-dwarf',
     },
   },
   elf: {
-    name: LocalizedPlayerRaces.elf,
+    name: RaceNames.elf,
     sprite: {
       class: 'player-elf',
     },
   },
   gnome: {
-    name: LocalizedPlayerRaces.gnome,
+    name: RaceNames.gnome,
     sprite: {
       class: 'player-gnome',
     },
   },
   human: {
-    name: LocalizedPlayerRaces.human,
+    name: RaceNames.human,
     sprite: {
       class: 'player-human',
     },
   },
   orc: {
-    name: LocalizedPlayerRaces.orc,
+    name: RaceNames.orc,
     sprite: {
       class: 'player-orc',
     },
   },
   troll: {
-    name: LocalizedPlayerRaces.troll,
+    name: RaceNames.troll,
     sprite: {
       class: 'player-troll',
     },
