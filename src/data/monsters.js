@@ -3,6 +3,7 @@ import { AttackVerbs } from '../localizations/actions'
 
 export const MonsterTypes = {
   RAT: {
+    species: ['COMMON', 'GREY', 'BROWN', 'GREEN'],
     COMMON: {
       name: MonsterNames.rat,
       hp: '1d6',
@@ -38,6 +39,7 @@ export const MonsterTypes = {
     },
   },
   OOZE: {
+    species: ['GREY'],
     GREY: {
       name: MonsterNames.ooze,
       hp: '2d6',
