@@ -1,7 +1,7 @@
 import { MonsterNames } from '../localizations/creatures'
 import { AttackVerbs } from '../localizations/actions'
 
-export const Monsters = {
+export const MonsterTypes = {
   RAT: {
     COMMON: {
       name: MonsterNames.rat,
