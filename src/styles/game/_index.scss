@@ -1,0 +1,13 @@
+$border: 2px solid $fg-primary;
+
+#game {
+  height: 100%;
+  background-color: $bg-primary;
+  display: grid;
+  grid-template-columns: auto 400px;
+  grid-template-rows: 75% 25%;
+}
+
+@import 'map';
+@import 'sidebar';
+@import 'messageLog';

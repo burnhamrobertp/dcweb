@@ -1,0 +1,8 @@
+#game-map {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
+  .map-row {
+    height: 32px;
+  }
+}
