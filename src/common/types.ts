@@ -6,6 +6,10 @@ export interface IBranch {
   }
 }
 
+export interface IMapCatalog {
+  [key: string]: { [key: string]: IMapTile }
+}
+
 export interface IMapTile {
   name: string,
   sprite: {
