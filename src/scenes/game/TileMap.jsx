@@ -4,7 +4,7 @@ import TileRow from './components/TileRow'
 
 class TileMap extends React.Component {
   render() {
-    const tiles = this.props.map.map(this.renderRow)
+    const tiles = this.props.map.map(TileMap.renderRow)
 
     return <div id="game-map">
       {tiles}
