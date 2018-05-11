@@ -12,7 +12,7 @@ class MessageLog extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  messages: state.messages.list
+  messages: state.message.list
 })
 
 export default connect(
