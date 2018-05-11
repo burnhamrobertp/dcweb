@@ -5,7 +5,6 @@ import { createStore } from 'redux'
 import './styles/dcweb.css'
 import rootReducer from './state/reducers'
 import App from './App'
-import registerServiceWorker from './registerServiceWorker'
 
 const store = createStore(rootReducer)
 
@@ -15,4 +14,3 @@ render(
   </Provider>,
   document.getElementById('root')
 )
-registerServiceWorker()
