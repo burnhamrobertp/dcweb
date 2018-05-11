@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-class MessageLog extends React.Component {
+export class MessageLog extends React.Component {
   render() {
     const messages = this.props.messages.map((message, index) => <div key={index}>{message}</div>)
 
