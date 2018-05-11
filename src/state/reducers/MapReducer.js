@@ -3,7 +3,8 @@ import { BranchTypes } from 'data/branches'
 import { MapTiles } from 'data/map'
 import { instantiateMap } from '../actions/map'
 
-const width = 15, height = 15
+const width = 15
+const height = 15
 const DEFAULT_STATE = {
   width,
   height,
