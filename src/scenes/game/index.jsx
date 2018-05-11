@@ -5,7 +5,7 @@ import { setBinding } from 'react-keydown/dist/store'
 import TileMap from './TileMap'
 import MessageLog from './MessageLog'
 import SideBar from './SideBar'
-import * as PlayerActions from 'actions/player'
+import * as PlayerActions from 'state/actions/player'
 
 class Game extends React.Component {
   componentDidMount() {
