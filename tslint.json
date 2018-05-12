@@ -6,6 +6,8 @@
   ],
   "rules": {
     "interface-over-type-literal": false,
+    "no-console": [false],
+    "no-shadowed-variable": false,
     "object-literal-sort-keys": false,
     "ordered-imports": [
       true,
@@ -16,6 +18,8 @@
     ]
   },
   "jsRules": {
+    "no-console": [false],
+    "no-shadowed-variable": false,
     "object-literal-sort-keys": false,
     "ordered-imports": [
       true,
