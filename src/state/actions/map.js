@@ -13,10 +13,10 @@ export function instantiateMap(mapRows) {
 }
 
 function instantiateTile(tileConfig) {
-  let variant = Math.floor(Math.random() * tileConfig.sprite.variants)
-  let tileSprite = { sprite: { class: tileConfig.sprite.class + variant }}
-  let tile = Object.assign({}, tileConfig, tileSprite)
+  const variant = Math.floor(Math.random() * tileConfig.sprite.variants)
+  const tileSprite = { sprite: { class: tileConfig.sprite.class + variant }}
+  const tile = Object.assign({}, tileConfig, tileSprite)
 
   delete tile.sprite.variants
-  return tileSprite
+  return tile
 }
