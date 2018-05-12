@@ -1,7 +1,8 @@
 import { TileNames } from '../localizations/map'
-import { IMapCatalog } from '../common/types'
+import { DictionaryIndex, IMapTileConfig } from '../common/types'
+import { MapTileType } from '../common/enum'
 
-export const MapTiles: IMapCatalog = {
+export const MapTiles: DictionaryIndex<MapTileType, IMapTileConfig> = {
   WALL: {
     INDESTRUCTIBLE: {
       name: TileNames.wall_i,

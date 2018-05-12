@@ -10,7 +10,7 @@ const DEFAULT_STATE = {
     index: {},
     list: [],
   },
-  race: PlayerRaces.human,
+  race: PlayerRaces.HUMAN,
 }
 
 export default handleActions(

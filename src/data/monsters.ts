@@ -1,10 +1,11 @@
 import { MonsterNames } from '../localizations/creatures'
 import { AttackVerbs } from '../localizations/actions'
+import { DictionaryIndex, IMonsterConfig } from '../common/types'
+import { AttackEffectSeverity, AttackEffectType, MonsterType } from '../common/enum'
 
-export const MonsterTypes = {
+export const MonsterConfig: DictionaryIndex<MonsterType, IMonsterConfig> = {
   RAT: {
-    species: ['COMMON', 'GREY', 'BROWN', 'GREEN'],
-    COMMON: {
+    WHITE: {
       name: MonsterNames.rat,
       hp: '1d6',
       attacks: [
@@ -36,10 +37,24 @@ export const MonsterTypes = {
     },
     GREEN: {
       name: MonsterNames.rat_green,
+      hp: '2d6+6',
+      attacks: [
+        {
+          verb: AttackVerbs.bite,
+          damage: '1d6',
+          effects: [
+            {
+              type: AttackEffectType.POISON,
+              severity: AttackEffectSeverity.VERY_MINOR,
+              probability: 1,
+              duration: '1d4'
+            }
+          ]
+        }
+      ]
     },
   },
   OOZE: {
-    species: ['GREY'],
     GREY: {
       name: MonsterNames.ooze,
       hp: '2d6',

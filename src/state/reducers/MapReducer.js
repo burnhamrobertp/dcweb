@@ -1,5 +1,5 @@
 import { handleActions } from 'redux-actions'
-import { BranchTypes } from 'data/branches'
+import { Branches } from 'data/branches'
 import { MapTiles } from 'data/map'
 import { instantiateMap } from '../actions/map'
 
@@ -9,10 +9,10 @@ const DEFAULT_STATE = {
   width,
   height,
   knownBranches: [],
-  currentBranch: BranchTypes.caves.name,
+  currentBranch: Branches.CAVES.name,
   currentDepth: 1,
   // Hard coded for now, I'm not actually going to implement map generation yet
-  [BranchTypes.caves.name]: {
+  [Branches.CAVES.name]: {
     1: instantiateMap([
       Array(width).fill(MapTiles.WALL.INDESTRUCTIBLE),
       ...Array(height - 2).fill(
