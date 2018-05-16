@@ -2,7 +2,6 @@ import React from 'react'
 
 class Logo extends React.Component {
   render() {
-    console.log(process.env);
     return <div id="logo">
       <div>{`   ..                                                     ..
  dF                     x=~                         . uW8"
