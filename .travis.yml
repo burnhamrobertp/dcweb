@@ -1,11 +1,16 @@
 language: node_js
 node_js:
-  - "node"
-
+- node
 cache: yarn
-
 deploy:
-  - provider: script
-    script: bash scripts/deploy.sh
-    on:
-      branch: master
+  provider: script
+  skip_cleanup: true
+  script: rsync -r --delete-after --quiet $TRAVIS_BUILD_DIR/build travis@robotofham.com:/opt/dcweb
+  on:
+    branch: master
+before_deploy:
+- openssl aes-256-cbc -K $encrypted_427b6ddac483_key -iv $encrypted_427b6ddac483_iv
+  -in deploy_rsa.enc -out /tmp/deploy_rsa -d
+- eval "$(ssh-agent -s)"
+- chmod 600 /tmp/deploy_rsa
+- ssh-add /tmp/deploy_rsa
