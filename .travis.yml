@@ -5,7 +5,7 @@ cache: yarn
 deploy:
   provider: script
   skip_cleanup: true
-  script: rsync -e "ssh -o StrictHostKeyChecking=no" -r --delete-after --quiet $TRAVIS_BUILD_DIR travis@robotofham.com:/opt/dcweb
+  script: bash scripts/deploy.sh
   on:
     branch: master
 before_deploy:
