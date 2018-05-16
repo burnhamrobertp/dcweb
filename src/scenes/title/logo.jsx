@@ -2,6 +2,7 @@ import React from 'react'
 
 class Logo extends React.Component {
   render() {
+    console.log(process.env);
     return <div id="logo">
       <div>{`   ..                                                     ..
  dF                     x=~                         . uW8"
@@ -15,7 +16,8 @@ class Logo extends React.Component {
 .888N..888  ?8888u../  \`%88%\`\`"*888Y"    '8888c. .+ .8888  888"
  \`"888*""    "8888P'     \`~     \`"        "88888%    \`%888*%"
     ""         "P'                          "YP'        "\`
-      `}</div>
+                                                        v${process.env.REACT_APP_VERSION}
+`}</div>
     </div>
   }
 }
