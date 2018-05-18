@@ -1,9 +1,9 @@
 import React from 'react'
-import SimpleSelectMenu from '../../components/SimpleSelectMenu'
+import SelectMenu from '../../components/SelectMenu'
 
 class TitleMenu extends React.Component {
   render() {
-    return <SimpleSelectMenu options={this.options} />
+    return <SelectMenu options={this.options} />
   }
 
   get options() {
