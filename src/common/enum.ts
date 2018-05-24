@@ -31,6 +31,12 @@ export enum BranchType {
   CAVES = 'CAVES',
 }
 
+export enum GameState {
+  NO_GAME,
+  START,
+  END
+}
+
 export enum MonsterType {
   RAT = 'RAT',
   OOZE = 'OOZE',
