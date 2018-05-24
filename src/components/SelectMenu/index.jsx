@@ -10,6 +10,7 @@ class SelectMenu extends KeyboundComponent {
     this.keybinds = [
       { key: ['j', 'down'], action: this.moveSelectDown },
       { key: ['k', 'up'], action: this.moveSelectUp },
+      { key: ['enter', 'space'], action: this.selectOption },
     ]
   }
 
@@ -33,6 +34,10 @@ class SelectMenu extends KeyboundComponent {
       selected = (selected + 1) % this.props.options.length
     } while(this.props.options[selected].disabled)
     this.setState({ selected })
+  }
+
+  selectOption = () => {
+    this.props.options[this.state.selected].action()
   }
 
   render() {
