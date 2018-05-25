@@ -1,22 +1,6 @@
 import { createAction } from 'redux-actions'
 
-/**
- * Given a map configuration, instantiate each tile
- *
- * This removes any variance data and facilitates pure components
- *
- * @param mapRows array
- * @return array
- */
-export function instantiateMap(mapRows) {
-  return mapRows.map(row => row.map(tileConfig => instantiateTile(tileConfig)))
-}
+export const setBranch = createAction('SET_BRANCH', (branch, depth) => ({ branch, depth }))
+export const setBranchMap = createAction('SET_BRANCH_MAP', (branch, depth, map) => ({ branch, depth, map }))
 
-function instantiateTile(tileConfig) {
-  const variant = Math.floor(Math.random() * tileConfig.sprite.variants)
-  const tileSprite = { sprite: { class: tileConfig.sprite.class + variant }}
-  const tile = Object.assign({}, tileConfig, tileSprite)
-
-  delete tile.sprite.variants
-  return tile
-}
+export const generateBranchMap = createAction('GENERATE_BRANCH_MAP', (branch, depth) => ({ branch, depth }))

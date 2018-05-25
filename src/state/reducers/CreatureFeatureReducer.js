@@ -5,5 +5,11 @@ const DEFAULT_STATE = {
 }
 
 export default handleActions({
-
+  SET_BRANCH_CREATURES: (state, action) => ({
+    ...state,
+    [action.payload.branch]: {
+      ...state[action.payload.branch],
+      [action.payload.depth]: action.payload.creatures,
+    },
+  }),
 }, DEFAULT_STATE)

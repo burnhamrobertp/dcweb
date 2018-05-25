@@ -1,5 +1,7 @@
 import React from 'react'
-import SelectMenu from '../../components/SelectMenu'
+import { connect } from 'react-redux'
+import SelectMenu from 'components/SelectMenu'
+import { startGame } from 'state/actions/game'
 
 class TitleMenu extends React.Component {
   render() {
@@ -10,6 +12,7 @@ class TitleMenu extends React.Component {
     return [
       {
         label: 'New Game',
+        action: this.props.startGame,
       },
       {
         label: 'Continue Game',
@@ -25,4 +28,9 @@ class TitleMenu extends React.Component {
   }
 }
 
-export default TitleMenu
+const mapStateToProps = state => ({ map: state.map})
+
+export default connect(
+  mapStateToProps,
+  { startGame },
+)(TitleMenu)
