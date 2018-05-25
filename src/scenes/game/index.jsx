@@ -1,19 +1,25 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { onMount, onUnmount } from 'react-keydown/dist/event_handlers'
-import { setBinding } from 'react-keydown/dist/store'
 import TileMap from './TileMap'
 import MessageLog from './MessageLog'
 import SideBar from './SideBar'
 import * as PlayerActions from 'state/actions/player'
+import KeyboundComponent from 'components/KeyboundComponent'
 
-class Game extends React.Component {
-  componentDidMount() {
-    onMount(this);
-  }
+class Game extends KeyboundComponent {
+  constructor(props) {
+    super(props)
 
-  componentWillUnmount() {
-    onUnmount(this);
+    this.keybinds = [
+      { key: ['k'], action: this.props.playerUp },
+      { key: ['y'], action: this.props.playerUpLeft },
+      { key: ['u'], action: this.props.playerUpRight },
+      { key: ['h'], action: this.props.playerLeft },
+      { key: ['l'], action: this.props.playerRight },
+      { key: ['j'], action: this.props.playerDown },
+      { key: ['b'], action: this.props.playerDownLeft },
+      { key: ['n'], action: this.props.playerDownRight },
+    ]
   }
 
   render() {
@@ -23,53 +29,7 @@ class Game extends React.Component {
       <MessageLog />
     </div>
   }
-
-  playerUp() {
-    this.props.playerUp()
-  }
-
-  playerUpLeft() {
-    this.props.playerUpLeft()
-  }
-
-  playerUpRight() {
-    this.props.playerUpRight()
-  }
-
-  playerLeft() {
-    this.props.playerLeft()
-  }
-
-  playerRight() {
-    this.props.playerRight()
-  }
-
-  playerDown() {
-    this.props.playerDown()
-  }
-
-  playerDownLeft() {
-    this.props.playerDownLeft()
-  }
-
-  playerDownRight() {
-    this.props.playerDownRight()
-  }
 }
-
-// Establish keybindings at global level
-[
-  { keys: ['k'], fn: Game.prototype.playerUp },
-  { keys: ['y'], fn: Game.prototype.playerUpLeft },
-  { keys: ['u'], fn: Game.prototype.playerUpRight },
-  { keys: ['h'], fn: Game.prototype.playerLeft },
-  { keys: ['l'], fn: Game.prototype.playerRight },
-  { keys: ['j'], fn: Game.prototype.playerDown },
-  { keys: ['b'], fn: Game.prototype.playerDownLeft },
-  { keys: ['n'], fn: Game.prototype.playerDownRight },
-].forEach(
-  binding => setBinding({ target: Game.prototype, fn: binding.fn, keys: binding.keys })
-)
 
 const mapDispatchToProps = dispatch => ({
   playerUp: () => dispatch(PlayerActions.actionDirection(0, -1)),
