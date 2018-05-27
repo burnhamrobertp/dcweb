@@ -1,10 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import TileMap from './TileMap'
-import MessageLog from './MessageLog'
-import SideBar from './SideBar'
-import * as PlayerActions from 'state/actions/player'
+import Uuidv1 from 'uuid/v1'
 import KeyboundComponent from 'components/KeyboundComponent'
+import MessageLog from './MessageLog'
+import ModalController from 'components/ModalController'
+import SideBar from './SideBar'
+import TileMap from './TileMap'
+import * as PlayerActions from 'state/actions/player'
+import { openModal } from 'state/actions/modal'
 
 class Game extends KeyboundComponent {
   constructor(props) {
@@ -19,6 +22,7 @@ class Game extends KeyboundComponent {
       { key: ['j'], action: this.props.playerDown },
       { key: ['b'], action: this.props.playerDownLeft },
       { key: ['n'], action: this.props.playerDownRight },
+      { key: ['esc'], action: this.openPrimaryMenu },
     ]
   }
 
@@ -27,7 +31,15 @@ class Game extends KeyboundComponent {
       <TileMap />
       <SideBar />
       <MessageLog />
+
+      <ModalController />
     </div>
+  }
+
+  openPrimaryMenu = () => {
+    const modalId = Uuidv1()
+
+    this.props.openModal(modalId, {}, 'myModal')
   }
 }
 
@@ -40,6 +52,7 @@ const mapDispatchToProps = dispatch => ({
   playerDown: () => dispatch(PlayerActions.actionDirection(0, 1)),
   playerDownLeft: () => dispatch(PlayerActions.actionDirection(-1, 1)),
   playerDownRight: () => dispatch(PlayerActions.actionDirection(1, 1)),
+  openModal: (id, props, content) => dispatch(openModal(id, props, content)),
 })
 
 export default connect(

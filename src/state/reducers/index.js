@@ -4,6 +4,7 @@ import creatureFeature from './CreatureFeatureReducer'
 import game from './GameReducer'
 import map from './MapReducer'
 import message from './MessageReducer'
+import modal from './ModalReducer'
 import player from './PlayerReducer'
 
 export default combineReducers({
@@ -12,5 +13,6 @@ export default combineReducers({
   game,
   map,
   message,
+  modal,
   player,
 })
