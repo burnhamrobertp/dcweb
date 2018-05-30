@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import Modal from './Modal'
+import Modal from 'components/Modal'
 
 class ModalController extends React.Component {
   render() {
@@ -13,7 +13,7 @@ class ModalController extends React.Component {
 
   renderModal = id => {
     const { props, content } = this.props.modals[id]
-    return <Modal key={id} { ...props }>{content}</Modal>
+    return <Modal key={id} scope={id} { ...props }>{content}</Modal>
   }
 }
 

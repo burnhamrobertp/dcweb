@@ -2,20 +2,22 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { closeModal } from 'state/actions/modal'
 import KeyboundComponent from 'components/KeyboundComponent'
+import ModalTitle from '../Modal/components/ModalTitle'
 
 class Modal extends KeyboundComponent {
   constructor(props) {
     super(props)
 
-    this.scope = props.id
     this.keybinds = [
       { key: ['esc'], action: this.closeModal }
     ]
   }
 
   render() {
+    const title = this.props.title ? <ModalTitle>{this.props.title}</ModalTitle> : null
     return <div className="modal">
-      {this.props.children}
+      {title}
+      <div className="body">{this.props.children}</div>
     </div>
   }
 

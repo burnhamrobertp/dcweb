@@ -7,6 +7,9 @@ const DEFAULT_STATE = {
 }
 
 export default handleActions({
+  RESET_MODAL_STATE: () => ({
+    ...DEFAULT_STATE
+  }),
   SET_MODAL_OPEN: (state, action) => ({
     ...state,
     index: {

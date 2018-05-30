@@ -12,5 +12,25 @@
     left: 50%;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
+    border: 4px double $fg-primary;
+    border-radius: $modal-border-radius;
+
+    .title {
+      padding: 0 10px;
+      position: absolute;
+      top: -11px;
+      left: 10px;
+      background-color: $bg-primary;
+      font-size: 12px;
+      letter-spacing: .83px
+    }
+
+    .body {
+      padding: 8px;
+    }
+  }
+
+  .overlay {
+    display: none;
   }
 }

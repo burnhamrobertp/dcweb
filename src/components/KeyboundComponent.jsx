@@ -4,23 +4,25 @@ import keymage from 'keymage'
 /**
  * Extensible component to easily enable keybindings
  *
- * When using KeyboundComponent, the extending Component needs to define this.scope (string)
- * and this.keybinds (array of objects). Optionally, it can also specify this._scope (string)
- * to be used as a "return scope" for when the KeyboundComponent is unmounted.
+ * When using KeyboundComponent, the extending Component needs to have a `scope` prop (string)
+ * and this.keybinds (array of objects).
  */
 class KeyboundComponent extends React.Component {
   constructor(props) {
     super(props)
 
     this.unbinders = []
+    if (props.scope) {
+      this.scope = props.scope
+      this._scope = keymage.getScope()
+      keymage.setScope(props.scope)
+    } else {
+      this.scope = keymage.getScope()
+      this._scope = keymage.getScope()
+    }
   }
 
   componentDidMount() {
-    if (this.scope) {
-      this._scope = this._scope || keymage.getScope()
-      keymage.setScope(this.scope)
-    }
-
     this.keybinds.forEach(bind => {
       // Array of keys, or just one key
       if (Array.isArray(bind.key)) {
@@ -35,7 +37,10 @@ class KeyboundComponent extends React.Component {
 
   componentWillUnmount() {
     this.unbinders.forEach(unbind => unbind())
-    keymage.setScope(this._scope)
+    // Restore previous scope, if set
+    if (this._scope) {
+      keymage.setScope(this._scope)
+    }
   }
 
   createKeybind(bind) {

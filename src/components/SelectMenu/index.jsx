@@ -7,7 +7,6 @@ class SelectMenu extends KeyboundComponent {
     super(props)
 
     this.state = { selected: 0 }
-    this.scope = props.scope
     this.keybinds = [
       { key: ['j', 'down'], action: this.moveSelectDown },
       { key: ['k', 'up'], action: this.moveSelectUp },

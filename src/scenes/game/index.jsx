@@ -7,12 +7,12 @@ import SideBar from './SideBar'
 import TileMap from './TileMap'
 import * as PlayerActions from 'state/actions/player'
 import { openModal } from 'state/actions/modal'
+import PrimaryMenu from './components/modals/PrimaryMenu'
 
 class Game extends KeyboundComponent {
   constructor(props) {
     super(props)
 
-    this.scope = 'game'
     this.keybinds = [
       { key: ['k'], action: this.props.playerUp },
       { key: ['y'], action: this.props.playerUpLeft },
@@ -36,8 +36,11 @@ class Game extends KeyboundComponent {
 
   openPrimaryMenu = () => {
     const modalId = Uuidv1()
+    const props = {
+      title: 'Game Menu',
+    }
 
-    this.props.openModal(modalId, {}, 'myModal')
+    this.props.openModal(modalId, props, <PrimaryMenu />)
   }
 }
 

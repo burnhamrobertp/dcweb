@@ -12,6 +12,9 @@ const DEFAULT_STATE = {
 }
 
 export default handleActions({
+  RESET_MAP_STATE: () => ({
+    ...DEFAULT_STATE,
+  }),
   SET_BRANCH: (state, action) => ({
     ...state,
     currentBranch: action.payload.branch,
