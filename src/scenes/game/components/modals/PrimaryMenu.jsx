@@ -14,9 +14,6 @@ class PrimaryMenu extends React.Component {
         label: 'Quit Game',
         action: this.props.endGame,
       },
-      {
-        label: 'Test',
-      },
     ]
   }
 }
