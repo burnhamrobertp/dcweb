@@ -5,7 +5,7 @@ import { startGame } from 'state/actions/game'
 
 class TitleMenu extends React.Component {
   render() {
-    return <SelectMenu options={this.options} />
+    return <SelectMenu options={this.options} scope='titleMenu' />
   }
 
   get options() {
