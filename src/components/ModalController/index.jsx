@@ -4,7 +4,6 @@ import Modal from './Modal'
 
 class ModalController extends React.Component {
   render() {
-    console.log(this.props.modals, this.props.stack)
     const modals = this.props.stack.map(this.renderModal)
 
     return <div id="modal-controller">

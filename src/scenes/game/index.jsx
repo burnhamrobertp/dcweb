@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import Uuidv1 from 'uuid/v1'
 import KeyboundComponent from 'components/KeyboundComponent'
 import MessageLog from './MessageLog'
-import ModalController from 'components/ModalController'
 import SideBar from './SideBar'
 import TileMap from './TileMap'
 import * as PlayerActions from 'state/actions/player'
@@ -31,8 +30,6 @@ class Game extends KeyboundComponent {
       <TileMap />
       <SideBar />
       <MessageLog />
-
-      <ModalController />
     </div>
   }
 

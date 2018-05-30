@@ -1,13 +1,16 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { GameState } from 'common/enum'
 import TitleScreen from 'scenes/title'
 import Game from 'scenes/game'
-import { GameState } from './common/enum'
+import ModalController from 'components/ModalController'
 
 class App extends React.Component {
   render() {
     return <div className="App">
       {this.body}
+
+      <ModalController />
     </div>
   }
 
