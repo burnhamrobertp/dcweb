@@ -13,6 +13,7 @@ class Game extends KeyboundComponent {
   constructor(props) {
     super(props)
 
+    this.scope = 'game'
     this.keybinds = [
       { key: ['k'], action: this.props.playerUp },
       { key: ['y'], action: this.props.playerUpLeft },

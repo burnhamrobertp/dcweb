@@ -20,7 +20,7 @@ class App extends React.Component {
       case GameState.END:
         return <TitleScreen />
       case GameState.START:
-        return <Game scope="game" />
+        return <Game />
       default:
         return <div>Invalid GameState: {this.props.gameState}</div>
     }

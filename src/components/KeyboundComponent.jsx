@@ -12,17 +12,13 @@ class KeyboundComponent extends React.Component {
     super(props)
 
     this.unbinders = []
-    if (props.scope) {
-      this.scope = props.scope
-      this._scope = keymage.getScope()
-      keymage.setScope(props.scope)
-    } else {
-      this.scope = keymage.getScope()
-      this._scope = keymage.getScope()
-    }
   }
 
   componentDidMount() {
+    if (this.scope) {
+      keymage.pushScope(this.scope)
+    }
+
     this.keybinds.forEach(bind => {
       // Array of keys, or just one key
       if (Array.isArray(bind.key)) {
@@ -38,13 +34,13 @@ class KeyboundComponent extends React.Component {
   componentWillUnmount() {
     this.unbinders.forEach(unbind => unbind())
     // Restore previous scope, if set
-    if (this._scope) {
-      keymage.setScope(this._scope)
+    if (this.scope) {
+      keymage.popScope()
     }
   }
 
   createKeybind(bind) {
-    const unbinder = keymage(this.scope, bind.key, bind.action)
+    const unbinder = keymage(keymage.getScope(), bind.key, bind.action)
     this.unbinders.push(unbinder)
   }
 }

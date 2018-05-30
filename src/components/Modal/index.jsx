@@ -8,6 +8,7 @@ class Modal extends KeyboundComponent {
   constructor(props) {
     super(props)
 
+    this.scope = props.id
     this.keybinds = [
       { key: ['esc'], action: this.closeModal }
     ]

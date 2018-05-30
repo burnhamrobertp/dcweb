@@ -13,7 +13,7 @@ class ModalController extends React.Component {
 
   renderModal = id => {
     const { props, content } = this.props.modals[id]
-    return <Modal key={id} scope={id} { ...props }>{content}</Modal>
+    return <Modal key={id} { ...props }>{content}</Modal>
   }
 }
 
