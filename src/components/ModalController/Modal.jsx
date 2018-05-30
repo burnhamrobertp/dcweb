@@ -8,13 +8,13 @@ class Modal extends KeyboundComponent {
     super(props)
 
     this.keybinds = [
-      { key: ['esc'], action: this.props.closeModal }
+      { key: ['esc'], action: this.closeModal }
     ]
   }
 
   render() {
-    return <div>
-      its a Modal
+    return <div className="modal">
+      {this.props.children}
     </div>
   }
 
